@@ -60,7 +60,7 @@ public class Main {
                 }
                 else
                 {
-                    System.out.println("It's a tie!");
+                    System.out.println("Rock vs. Rock, it's a tie!");
                 }
 
             }
@@ -76,7 +76,7 @@ public class Main {
                 }
                 else
                 {
-                    System.out.println("It's a tie!");
+                    System.out.println("Paper vs. Paper, it's a tie!");
                 }
             }
             else
@@ -91,7 +91,7 @@ public class Main {
                 }
                 else
                 {
-                    System.out.println("It's a tie!");
+                    System.out.println("Scissors vs. Scissors, it's a tie!");
                 }
             }
             do
