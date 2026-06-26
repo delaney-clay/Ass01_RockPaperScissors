@@ -10,16 +10,17 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String playAChoice = "";
         String playBChoice = "";
-        String continue = "";
+        String endGameDecision = "";
         boolean playADone = false;
         boolean playBDone = false;
+        boolean validFinalInput = false;
         boolean done = false;
 
         do
         {
             do
             {
-                System.out.println("Player A, enter your move:\nR for Rock\nP for Paper\nS fpr Scissors ");
+                System.out.println("Player A, enter your move:\nR for Rock\nP for Paper\nS for Scissors ");
                 playAChoice = in.nextLine();
 
                 if(playAChoice.equalsIgnoreCase("r") || playAChoice.equalsIgnoreCase("p") || playAChoice.equalsIgnoreCase("s"))
@@ -34,7 +35,7 @@ public class Main {
             }while(!playADone);
             do
             {
-                System.out.println("Player B, enter your move:\nR for Rock\nP for Paper\nS fpr Scissors ");
+                System.out.println("Player B, enter your move:\nR for Rock\nP for Paper\nS for Scissors ");
                 playBChoice = in.nextLine();
 
                 if(playBChoice.equalsIgnoreCase("r") || playBChoice.equalsIgnoreCase("p") || playBChoice.equalsIgnoreCase("s"))
@@ -96,20 +97,23 @@ public class Main {
             do
             {
                 System.out.print("Do you want to play again? (Y/N): ");
-                continue = in.nextLine()
-                if(continue.equalsIgnoreCase("y"))
+                endGameDecision = in.nextLine();
+                if(endGameDecision.equalsIgnoreCase("y"))
                 {
                     done = false;
+                    validFinalInput = true;
                 }
-                else if(continue.equalsIgnoreCase("n"))
+                else if(endGameDecision.equalsIgnoreCase("n"))
                 {
                     done = true;
+                    validFinalInput = true;
                 }
                 else
                 {
                     System.out.println("Invalid input. Please try again.");
+                    validFinalInput = false;
                 }
-            }
+            }while(!validFinalInput);
         }while(!done);
     }
 }
